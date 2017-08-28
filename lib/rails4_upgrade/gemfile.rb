@@ -21,7 +21,7 @@ module Rails4Upgrade
 
     def dependencies
       @dependencies ||= @lockfile.dependencies.map { |dependency|
-        self[dependency.name]
+        self[dependency[0]]
       }.compact
     end
 
